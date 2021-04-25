@@ -10,7 +10,7 @@ class Booking extends Model
     use SoftDeletes;
     protected $fillable = [
 
-        'booking_name', 'booking_email','booking_mobile','booking_passenger','user_email','jurny_check'
+        'booking_name', 'booking_email','booking_mobile','booking_passenger','jurny_id','user_id',
 
     ]; 
 
@@ -29,6 +29,11 @@ class Booking extends Model
     public function jurny()
     {
         return $this->belongsTo(Jurny::class);
+    }
+
+    public function book()
+    {
+        return $this->belongsTo(Jurny::class,'jurny_id');
     }
  
 }

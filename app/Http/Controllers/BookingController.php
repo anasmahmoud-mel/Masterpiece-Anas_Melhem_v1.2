@@ -67,8 +67,9 @@ class BookingController extends Controller
             'booking_email' => request('booking_email'),
             'booking_mobile' => request('booking_mobile'),
             'booking_passenger' => request('booking_passenger'),
-            'jurny_check' => request('jurny_check'),
-            'user_email' => auth()->id(),
+            'jurny_id' => request('jurny_id'),
+            'user_id' => request('user_id'),
+            // 'user_email' => auth()->id(),
 
         ]);
 
@@ -161,10 +162,22 @@ class BookingController extends Controller
 
     public function storex(Request $request)
     {
-      $jurny = Jurny::where('user_id', '=', auth()->id())->get();
-      dd($jurny);
+//       $jurny = Jurny::where('user_id', '=', auth()->id())->get();
+//       dd($jurny);
 
-  ;
+//   ;
+
+// $booking = new Booking();
+// $booking->user_id = $request->session()->get('user_id');
+// $booking->jurny_id  = $request->session()->get('jurny_id ');
+// $booking->additional_info = $request->session()->get('room_price');
+//        $booking->date_from = $request->input('arrival');
+// $booking->date_from = Carbon::createFromFormat('m/d/Y', $request->input('arrival'))->format('Y-m-d');
+//        $booking->date_to = $request->input('departure');
+// $booking->date_to = Carbon::createFromFormat('m/d/Y', $request->input('departure'))->format('Y-m-d');
+// $booking->save();
+// $request->session()->put('success',"Your Book is Successes");
+// return redirect("/jurny/main");
 
    
     //   $booking = new Booking();
@@ -190,21 +203,44 @@ class BookingController extends Controller
 
       //  return view('public_view.my-account', compact('jurny', 'booking'));
     }
-    public function profile(Request $request,$email)
+    public function profile(Request $request,$id)
     {
+        // $user=Auth::User()->id;
+        // dd($user);
+        // $jurny=Jurny::find($user);
+        // dd($jurny);
+
+        // $userjurny=$jurny->jurny;
+        // dd($jurny);
+
+        // $book=Booking::where('user_id',$id);
+        // $bookings=Booking::find($id);
+        // $book=$bookings->booking;
+        // dd($book);
+        // dd($bookings);
+        $bookings = Jurny::where('user_id',$id)->get();
+        // $jurny = Booking::find('jurny_id');
+        // $jurny=Booking::all();
+        // $hh=$jurny->book;
+        // dd($hh);
+
+        return view('public_view.my-account',compact('bookings'));
+
+
+
         // $jurny= Jurny::find(4);
         // dd($jurny);
        
-        $prop = DB::table('bookings')->where('booking_email',$email)->get()->all();
+        // $prop = DB::table('bookings')->where('booking_email',$email)->get()->all();
         // dd($prop); 
         
         //$jurny_check=
         //   $state= DB::table('');
-         $booking = DB::table('bookings')->get()->all();   
-         foreach ($booking as $booking) {
-          $anas= $booking->jurny_check."<br>";
-          $state = DB::table('jurnys')->where('id',$anas)->get()->all();
-           dd($state);
+        //  $booking = DB::table('bookings')->get()->all();   
+        //  foreach ($booking as $booking) {
+        //   $anas= $booking->jurny_check."<br>";
+        //   $state = DB::table('jurnys')->where('id',$anas)->get()->all();
+        //    dd($state);
          // echo $anas;
         }
         //   $prop = DB::table('bookings')->get()->all();
@@ -224,12 +260,6 @@ class BookingController extends Controller
         //  else{
         //      dd('anas');
 
-              return view('public_view.my-account', compact('prop', 'state'));
+            //   return view('public_view.my-account', compact('prop', 'state'));
          }
         //  $comment = Accept::get()->all();
-
-
-       
-
-    
-}

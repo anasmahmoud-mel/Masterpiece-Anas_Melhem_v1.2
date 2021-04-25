@@ -20,15 +20,16 @@ class CreateBookingsTable extends Migration
         
         Schema::create('bookings', function (Blueprint $table) {
             $table->bigIncrements('id');
-         
-            $table->integer('jurny_id')->unsigned()->nullable()->index();
-            $table->integer('user_id')->unsigned()->nullable()->index();
-            $table->integer('user_email');
-            $table->integer('jurny_check');
+            // $table->integer('user_email');
+            // $table->integer('jurny_check');
             $table->string('booking_name');
             $table->string('booking_email');
             $table->string('booking_mobile');
             $table->string('booking_passenger');
+            $table->unsignedBigInteger('user_id');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+            $table->unsignedBigInteger('jurny_id');
+            $table->foreign('jurny_id')->references('id')->on('jurnys')->onDelete('cascade');
             $table->softDeletes();
             $table->timestamps();
         });

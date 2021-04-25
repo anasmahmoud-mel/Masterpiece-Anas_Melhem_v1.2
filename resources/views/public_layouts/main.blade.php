@@ -206,7 +206,7 @@
                     <li><a href="contact">Contact us</a></li>
                     <li class="ymm-sw">
                         <a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="200"
-                            href="/jurny/acccunt/{{ Auth::user()->email }}">My account<b class="caret"></b> </a>
+                            href="/jurny/acccunt/{{ Auth::user()->id }}">My account<b class="caret"></b> </a>
                         <ul class="dropdown-menu navbar-nav">
                             <li> <a class="dropdown-item" href="{{ route('logout') }}"
                                 onclick="event.preventDefault();
@@ -217,7 +217,7 @@
                              <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                  @csrf
                              </form></li>
-                             <li><a href="/jurny/acccunt/{{ Auth::user()->email }}">Account</a></li>
+                             <li><a href="/jurny/acccunt/{{ Auth::user()->id }}">Account</a></li>
                             
                         </ul>
                     </li>

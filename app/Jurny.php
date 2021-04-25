@@ -26,7 +26,12 @@ class Jurny extends Model
     }
     public function user()
     {
-        return $this->hasMany(User::class);
+        return $this->hasMany(User::class,'user_id');
+    }
+
+    public function jurnies()
+    {
+        return $this->hasMany(Booking::class);
     }
 
 

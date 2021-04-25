@@ -53,23 +53,25 @@
                                     <th>Status</th>
                             
                                     <th>Download</th>
+                                    @foreach ($bookings as $booking )
                                 </tr>
 
-                                <tr title="Booking id : 1448465068">
+                                {{-- <tr title="Booking id : 1448465068"> --}}
                             
-                                    @foreach ($state as $booking )
+                                    
                                         
                                     <td>{{$booking->from}} </td>
                                     <td>{{$booking->to}} </td>
                                     <td>{{$booking->date}} </td>
+                                    {{-- <td>{{$jurny}} </td> --}}
                                
                                   
-                                    @endforeach
-                                      @foreach ($prop as $booking )
+                                    
+                                      {{-- @foreach ($prop as $booking ) --}}
                                         
-                                    <td>{{$booking->booking_passenger}} </td>
+                                    {{-- <td>{{$booking->booking_passenger}} </td> --}}
                                   
-                                    @endforeach 
+                                    {{-- @endforeach  --}}
                                     <td><strong class="status-orange">------</strong></td>
                              
                                     <td class="center">
@@ -77,7 +79,8 @@
                                             <i class="pe-7s-download size-35"></i> 
                                         </a>
                                     </td>
-                                </tr> 
+                                </tr>
+                                 @endforeach
                                
                             </tbody>
                         </table>

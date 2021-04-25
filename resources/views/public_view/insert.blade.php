@@ -157,13 +157,20 @@
                     </div>
                     <!-- / .title summary-->
                     <div class="sum-direction-data wow fadeInRight animated">
+                      
+{{-- 
+                        @foreach ($jurny as $jurnys)
+
                         <h3><strong class="color">1.</strong> Direction :</h3>
                         <ul class="report">
-                            <li><strong>From :</strong><em class="em-picking-up"> Roissy </em></li>
-                            <li><strong>To :</strong><em class="em-dropping-off"> Paris nord</em></li>
-                            <li><strong>Date & Time :</strong><em class="em-time"> 28-12-2015 & 22:05:20 </em></li>
-                            <li><strong>Distance : </strong><em class="em-distance"> 10km</em></li>
+                            <li><strong>From :</strong><em class="em-picking-up">{{ $jurnys->from }} </em></li>
+                            <li><strong>To :</strong><em class="em-dropping-off"> {{ $jurnys->to }}</em></li>
+                            <li><strong>Date & Time :</strong><em class="em-time"> {{ $jurnys->date }} </em></li>
+                            <li><strong>Distance : </strong><em class="em-distance"></em></li>
                         </ul>
+
+
+                    @endforeach --}}
                     </div>
                     <!-- / .sum-direction-data-->
                     <div class="sum-cars-data wow fadeInRight animated">
@@ -174,9 +181,9 @@
                     <div class="sum-client-data wow fadeInRight animated">
                         <h3><strong class="color">3.</strong> Personal info :</h3>
                         <ul class="report">
-                            <li><strong>Your Name :</strong><em class="em-name"> Kimaro kyoto </em></li>
-                            <li><strong>Email :</strong><em class="em-email"> kimaro@name.com</em></li>
-                            <li><strong>Phone :</strong><em class="em-phone"> +3 789 678 1234 </em></li>
+                            <li><strong>Your Name :</strong><em class="em-name"> {{Auth::user()->name }}</em></li>
+                            <li><strong>Email :</strong><em class="em-email"> {{Auth::user()->email }}</em></li>
+                         
                         </ul>
 
                     </div>

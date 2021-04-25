@@ -16,7 +16,8 @@ Route::get('/', function () {
 });
 
 Route::get('/jurny/acccunt/' ,'BookingController@storex');
-Route::get('/jurny/acccunt/{email}' ,'BookingController@profile');
+Route::get('/jurny/acccunt/{id}' ,'BookingController@profile');
+Route::get('/jurny/booking' ,'BookingController@storex');
 
 
 
