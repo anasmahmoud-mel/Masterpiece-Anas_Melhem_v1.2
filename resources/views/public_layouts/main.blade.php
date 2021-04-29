@@ -3,7 +3,7 @@
     <head>
 
         <!-- /.website title -->
-        <title>JURNY| Home page</title>
+        <title>JOURNEY| Home page</title>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
         <meta charset="UTF-8" />
         <!-- CSS Files -->
@@ -50,13 +50,13 @@
 
                             <!-- /.main title -->
                             <h1 class="wow fadeInLeft">
-                              <span class="color">JURNY</span> <br> Door to Door
+                              <span class="color">JOURNEY</span> <br> Door to Door
                             </h1>
 
                             <!-- /.header paragraph -->
                             <div class="landing-text wow fadeInUp">
-                                <p><span class="color">Jurny</span> is a modern application to help all people to find the direction in a 
-                                    simple way, we look to find it useful and easy to use </p>
+                                <p><span class="color">JOURNEY  </span> is a modern application to help all people to find the direction in a 
+                                    simple way, we look to find it useful and easy to use. </p>
                             </div>				  
 
                             <!-- /.header button -->
@@ -327,9 +327,9 @@
                         <div class="col-md-8 col-md-offset-2 col-sm-12 text-center">
 
                             <!-- /.download title -->
-                            <h2 class="wow fadeInRight">Would like to know more?</h2>
+                            <h2 class="wow fadeInRight">Have you suffered during your journey ?</h2>
                             <p class="contact_text wow fadeInLeft">
-                                There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly . 
+                               
                             </p>
 
                             <!-- /.download button -->
@@ -361,7 +361,7 @@
             <div class="container">
                 <div class="text-center">
                     <!-- /.pricing title -->
-                    <h2 class="wow fadeInLeft">THE FIXE PRICE</h2>
+                    <h2 class="wow fadeInLeft">The Fixed Price</h2>
                     <div class="title-line wow fadeInRight"></div>
                 </div>
                 <div class="row package-option">

@@ -3,7 +3,7 @@
     <head>
 
         <!-- /.website title -->
-        <title>JURNY | Select Car step two</title>
+        <title>JOURNEY| Select Car step two</title>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
         <meta charset="UTF-8" />

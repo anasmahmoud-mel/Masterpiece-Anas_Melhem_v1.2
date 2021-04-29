@@ -123,13 +123,11 @@
                                                     name="booking_email" value="{{ Auth::user()->email }}">
                                             </div>
                                         </div>
-                                        <div class="col-sm-6">
-                                            <div class="form-group">
+                                  
                                                 {{-- <label for="email-login">Email</label> --}}
                                                 <input class="form-control" id="user_id" type="hidden"
                                                     name="user_id" value="{{ Auth::user()->id }}">
-                                            </div>
-                                        </div>
+                                     
                                         @foreach ($jurny as $jurnys)
                                         <input name="jurny_id" id="jurny_id"  type="hidden" value= "{{ $jurnys->id}}" >
                                         @endforeach

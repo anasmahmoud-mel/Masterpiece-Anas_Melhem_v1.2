@@ -13,7 +13,7 @@
                     <!-- /.contact title -->
                     <div class="row row-feat wow fadeInUp">
                         <div class="text-center">
-                            <h2 class="wow fadeInLeft animated">WE ARE HER TO HELP YOU</h2>
+                            <h2 class="wow fadeInLeft animated">WE ARE HERE TO HELP YOU</h2>
                             <div class="title-line wow fadeInRight animated"></div>
                         </div>
                         <br>
@@ -32,7 +32,7 @@
                         </div>
                         <h4 class="text-uppercase">Address</h4>
                         <div class="inner">
-                            <p>13/25 New Avenue <br>New Heaven, 45Y 73J England,<br>Great Britain</p>
+                            <p>Amman <br>University streets<br>Jordan</p>
                         </div>
                     </div>
                     <!-- /.feature 1 -->
@@ -43,9 +43,9 @@
                         </div>
                         <h4 class="text-uppercase">Call center</h4>
                         <div class="inner">
-                            <p>This number is toll free if calling from Great Britain otherwise we advise you to use the
-                                electronic form of communication.
-                                <br> <b>+33 555 444 333</b>
+                      <p>
+                          This number is toll free, call us if you need any help.</p>  
+                              <b>+962 77 0536 163</b>
                             </p>
                         </div>
                     </div>
@@ -57,8 +57,8 @@
                         </div>
                         <h4 class="text-uppercase">Electronic support</h4>
                         <div class="inner">
-                            <p> Please feel free to write an email to us or to<br> use our electronic ticketing system.
-                                <br> <b> info@company.com</b><br><b>Ticketio - our ticketing support platform</b>
+                            <p> Please feel free to send an email to us 
+                                <br> <b> info@company.com</b>.
                             </p>
                         </div>
                     </div>

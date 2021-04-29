@@ -10,9 +10,18 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-use Illuminate\Support\Facades\Route;
-Route::get('/', function () {
-    dd(Hash::make("123456789"));
+
+
+
+
+ use Illuminate\Support\Facades\Route;
+// Route::get('/', function () {
+//     dd(Hash::make("123456789"));
+// });
+
+
+Route::get('/anas', function () {
+    return view('auth.login');
 });
 
 Route::get('/jurny/acccunt/' ,'BookingController@storex');
@@ -94,13 +103,15 @@ Route::group(['middleware' => ['auth', 'admin']], function () {
     Route::get('/dashboard/admin/register/{id}', 'admin\DashboardController@registeredit');
     Route::put('/dashboard/admin/update/{id}', 'admin\DashboardController@registerupdate');
     Route::get('/dashboard/admin/delete/{id}', 'admin\DashboardController@registerdelete');
+    Route::get('/dashboard/admin/create', 'admin\DashboardController@create');
+    Route::post('/dashboard/admin/create', 'admin\DashboardController@store');
 });
 
 //Visitor - manage 
 Route::resource('/dashboard/visitors', 'VisitorController');
 
-Route::get('/main', 'VisitorController@create2');
-Route::post('/main', 'VisitorController@store');
+// Route::get('/main', 'VisitorController@create2');
+// Route::post('/main', 'VisitorController@store');
 
 //Visitors - add a new from dashboard 
 Route::post('setting', 'VisitorController@storee')->name('setting');
@@ -136,10 +147,6 @@ Route::get('/jurny/booking', 'RelationController@search');
 
 
 
-//public-Theme[login+register Visitors]
 
-//Route::post('/paradise/register','UserRegisterController@store');
-//Route::get('/jurny/register', 'VisitorController@store');
-//Route::post('/jurny/register', 'LoginController@check');
-//Route::get('/jurny/register', 'LoginController@index');
-//Route::get('/jurny/register', 'LoginController@logout');
+
+

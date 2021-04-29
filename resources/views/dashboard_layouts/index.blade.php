@@ -2,369 +2,471 @@
 <html lang="en">
 
 <head>
-    <!-- Required meta tags-->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="au theme template">
-    <meta name="author" content="Hau Nguyen">
-    <meta name="keywords" content="au theme template">
+    <title>Journy website</title>
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="#">
+    <meta name="keywords" content="Admin , Responsive, Landing, Bootstrap, App, Template, Mobile, iOS, Android, apple, creative app">
+    <meta name="author" content="#">
+    <!-- Favicon icon -->
+ 
+    <link rel="icon" href="{{ asset('dashboard_theme\assets\files\assets\images\favicon.ico')}}" type="image/x-icon">
+    <!-- Google font--><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,800" rel="stylesheet">
+    <!-- Required Fremwork -->
+    <link rel="stylesheet" type="text/css" href="{{ asset('dashboard_theme\assets\files\bower_components\bootstrap\css\bootstrap.min.css')}}">
+    <!-- themify-icons line icon -->
+    <link rel="stylesheet" type="text/css" href="{{ asset('dashboard_theme\assets\files\assets\icon\themify-icons\themify-icons.css')}}">
+    <!-- ico font -->
+    <link rel="stylesheet" type="text/css" href="{{ asset('dashboard_theme\assets\files\assets\icon\icofont\css\icofont.css')}}">
+    <!-- feather Awesome -->
+    <link rel="stylesheet" type="text/css" href="{{ asset('dashboard_theme\assets\files\assets\icon\feather\css\feather.css')}}">
+    <!-- Style.css -->
+    <link rel="stylesheet" type="text/css" href="{{ asset('dashboard_theme\assets\files\assets\css\style.css')}}">
 
-    <!-- Title Page-->
-    <title>@yield('title')</title>
+    <link rel="stylesheet" type="text/css" href="{{ asset('dashboard_theme\assets\files\assets\css\linearicons.css')}}">
 
-    <!-- Fontfaces CSS-->
-    <link href="{{ asset('dashboard_theme/css/font-face.css')}}" rel="stylesheet" media="all">
-    <link href="{{ asset('dashboard_theme/vendor/font-awesome-4.7/css/font-awesome.min.css')}}" rel="stylesheet" media="all">
-    <link href="{{ asset('dashboard_theme/vendor/font-awesome-5/css/fontawesome-all.min.css')}}" rel="stylesheet" media="all">
-    <link href="{{ asset('dashboard_theme/vendor/mdi-font/css/material-design-iconic-font.min.css')}}" rel="stylesheet" media="all">
-
-    <!-- Bootstrap CSS-->
-    <link href="{{ asset('dashboard_theme/vendor/bootstrap-4.1/bootstrap.min.css')}}" rel="stylesheet" media="all">
-
-    <!-- Vendor CSS-->
-    <link href="{{ asset('dashboard_theme/vendor/animsition/animsition.min.css')}}" rel="stylesheet" media="all">
-    <link href="{{ asset('dashboard_theme/vendor/bootstrap-progressbar/bootstrap-progressbar-3.3.4.min.css')}}" rel="stylesheet" media="all">
-    <link href="{{ asset('dashboard_theme/vendor/wow/animate.css')}}" rel="stylesheet" media="all">
-    <link href="{{ asset('dashboard_theme/vendor/css-hamburgers/hamburgers.min.css')}}" rel="stylesheet" media="all">
-    <link href="{{ asset('dashboard_theme/vendor/slick/slick.css')}}" rel="stylesheet" media="all">
-    <link href="{{ asset('dashboard_theme/vendor/select2/select2.min.css')}}" rel="stylesheet" media="all">
-    <link href="{{ asset('dashboard_theme/vendor/perfect-scrollbar/perfect-scrollbar.css')}}" rel="stylesheet" media="all">
-
-    <!-- Main CSS-->
-    <link href="{{ asset('dashboard_theme/css/theme.css')}}" rel="stylesheet" media="all">
-
-    {{-- sweet alert --}}
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-
+    <link rel="stylesheet" type="text/css" href="{{ asset('dashboard_theme\assets\files\assets\css\jquery.mCustomScrollbar.css')}}">
 </head>
 
-<body class="animsition">
-<div class="page-wrapper">
-    <!-- HEADER MOBILE-->
-    <header class="header-mobile d-block d-lg-none">
-        <div class="header-mobile__bar">
-            <div class="container-fluid">
-                <div class="header-mobile-inner">
-                    <a class="logo" href="index.html">
-                        <img src="{{ asset('dashboard_theme/images/icon/logo.png')}}" alt="CoolAdmin" />
-                    </a>
-                    <button class="hamburger hamburger--slider" type="button">
-                            <span class="hamburger-box">
-                                <span class="hamburger-inner"></span>
-                            </span>
-                    </button>
-                </div>
+<body>
+<!-- Pre-loader start -->
+<div class="theme-loader">
+    <div class="ball-scale">
+        <div class='contain'>
+            <div class="ring">
+                <div class="frame"></div>
             </div>
-        </div>
-        <nav class="navbar-mobile">
-            <div class="container-fluid">
-                <ul class="navbar-mobile__list list-unstyled">
-                    <li>
-                        <a href="/dashboard/admin/register">
-                            <i class="fas fa-tachometer-alt"></i>Manage Admin</a>
-                    </li>
-
-                    <li>
-                        <a href="/dashboard/visitors">
-                            <i class="fas fa-users"></i>Manage Visitors</a>
-                    </li>
-
-                    <li>
-                        <a href="/dashboard/partners">
-                            <i class="fas fa-chart-bar"></i>Manage Partners </a>
-                    </li>
-                    <li>
-                        <a href="/dashboard/bookings">
-                            <i class="fas fa-chart-bar"></i>Manage Bookings</a>
-                    </li>
-
-                    <li>
-                        <a href="/dashboard/jurnys">
-                            <i class="fas fa-home"></i>Manage Jurny</a>
-                    </li>
-                    <li>
-                        <a href="/dashboard/contacts">
-                            <i class="fas fa-home"></i>Manage Contacts</a>
-                    </li>
-
-                    <li>
-                        <a href="/dashboard/another">
-                            <i class="fas fa-hotel"></i>Manage another</a>
-                    </li>
-          
-                  
-                </ul>
+            <div class="ring">
+                <div class="frame"></div>
             </div>
-        </nav>
-    </header>
-    <!-- END HEADER MOBILE-->
-
-    <!-- MENU SIDEBAR-->
-    <aside class="menu-sidebar d-none d-lg-block">
-        <div class="logo">
-            <a href="#">
-                <img src="{{ asset('dashboard_theme/images/icon/logo.png')}}" alt="Cool Admin" />
-            </a>
-        </div>
-        <div class="menu-sidebar__content js-scrollbar1">
-            <nav class="navbar-sidebar">
-                <ul class="list-unstyled navbar__list">
-
-                    <li>
-                        <a href="/dashboard/admin/register">
-                            <i class="fas fa-tachometer-alt"></i>Manage Admin</a>
-                    </li>
-
-                    <li>
-                        <a href="/dashboard/visitors">
-                            <i class="fas fa-users"></i>Manage Visitors</a>
-                    </li>
-
-                    <li>
-                        <a href="/dashboard/partners">
-                            <i class="fas fa-chart-bar"></i>Manage Partners </a>
-                    </li>
-                    <li>
-                        <a href="/dashboard/bookings">
-                            <i class="fas fa-chart-bar"></i>Manage Bookings</a>
-                    </li>
-
-                    <li>
-                        <a href="/dashboard/jurnys">
-                            <i class="fas fa-home"></i>Manage Jurny</a>
-                    </li>
-                    <li>
-                        <a href="/dashboard/contacts">
-                            <i class="fas fa-home"></i>Manage Contacts</a>
-                    </li>
-
-                    <li>
-                        <a href="/dashboard/another">
-                            <i class="fas fa-hotel"></i>Manage another</a>
-                    </li>
-
-            
-
-                </ul>
-            </nav>
-        </div>
-    </aside>
-    <!-- END MENU SIDEBAR-->
-
-    <!-- PAGE CONTAINER-->
-    <div class="page-container">
-        <!-- HEADER DESKTOP-->
-        <header class="header-desktop">
-            <div class="section__content section__content--p30">
-                <div class="container-fluid">
-                    <div class="header-wrap">
-                        <form class="form-header" action="{{url('/search')}}"  method="get" >
-                            <input class="au-input au-input--xl" type="text" name="query" placeholder="Search for datas &amp; reports..." />
-                            <button class="au-btn--submit" type="submit">
-                                <i class="zmdi zmdi-search"></i>
-                            </button>
-                        </form>
-                        <a href="/jurny/main">
-                            <i class="fas fa-home"></i></a>
-                        <div class="header-button">
-                         
-                            <div class="noti-wrap">
-                                
-                                <div class="noti__item js-item-menu">
-                                    <i class="zmdi zmdi-comment-more"></i>
-                                    <span class="quantity">1</span>
-                                    <div class="mess-dropdown js-dropdown">
-                                        <div class="mess__title">
-                                            <p>You have 2 news message</p>
-                                        </div>
-                                        <div class="mess__item">
-                                            <div class="image img-cir img-40">
-                                                <img src="{{ asset('dashboard_theme/images/icon/avatar-06.jpg')}}" alt="Michelle Moreno" />
-                                            </div>
-                                            <div class="content">
-                                                <h6>Michelle Moreno</h6>
-                                                <p>Have sent a photo</p>
-                                                <span class="time">3 min ago</span>
-                                            </div>
-                                        </div>
-                                        <div class="mess__item">
-                                            <div class="image img-cir img-40">
-                                                <img src="{{ asset('dashboard_theme/images/icon/avatar-04.jpg')}}" alt="Diane Myers" />
-                                            </div>
-                                            <div class="content">
-                                                <h6>Diane Myers</h6>
-                                                <p>You are now connected on message</p>
-                                                <span class="time">Yesterday</span>
-                                            </div>
-                                        </div>
-                                        <div class="mess__footer">
-                                            <a href="#">View all messages</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="noti__item js-item-menu">
-                                    <i class="zmdi zmdi-email"></i>
-                                    <span class="quantity">1</span>
-                                    <div class="email-dropdown js-dropdown">
-                                        <div class="email__title">
-                                            <p>You have 3 New Emails</p>
-                                        </div>
-                                        <div class="email__item">
-                                            <div class="image img-cir img-40">
-                                                <img src="{{ asset('dashboard_theme/images/icon/avatar-06.jpg')}}" alt="Cynthia Harvey" />
-                                            </div>
-                                            <div class="content">
-                                                <p>Meeting about new public...</p>
-                                                <span>Cynthia Harvey, 3 min ago</span>
-                                            </div>
-                                        </div>
-                                        <div class="email__item">
-                                            <div class="image img-cir img-40">
-                                                <img src="{{ asset('dashboard_theme/images/icon/avatar-05.jpg')}}" alt="Cynthia Harvey" />
-                                            </div>
-                                            <div class="content">
-                                                <p>Meeting about new public...</p>
-                                                <span>Cynthia Harvey, Yesterday</span>
-                                            </div>
-                                        </div>
-                                        <div class="email__item">
-                                            <div class="image img-cir img-40">
-                                                <img src="{{ asset('dashboard_theme/images/icon/avatar-04.jpg')}}" alt="Cynthia Harvey" />
-                                            </div>
-                                            <div class="content">
-                                                <p>Meeting about new public...</p>
-                                                <span>Cynthia Harvey, April 12,,2018</span>
-                                            </div>
-                                        </div>
-                                        <div class="email__footer">
-                                            <a href="#">See all emails</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="noti__item js-item-menu">
-                                    <i class="zmdi zmdi-notifications"></i>
-                                    <span class="quantity">3</span>
-                                    <div class="notifi-dropdown js-dropdown">
-                                        <div class="notifi__title">
-                                            <p>You have 3 Notifications</p>
-                                        </div>
-                                        <div class="notifi__item">
-                                            <div class="bg-c1 img-cir img-40">
-                                                <i class="zmdi zmdi-email-open"></i>
-                                            </div>
-                                            <div class="content">
-                                                <p>You got a email notification</p>
-                                                <span class="date">April 12, 2018 06:50</span>
-                                            </div>
-                                        </div>
-                                        <div class="notifi__item">
-                                            <div class="bg-c2 img-cir img-40">
-                                                <i class="zmdi zmdi-account-box"></i>
-                                            </div>
-                                            <div class="content">
-                                                <p>Your account has been blocked</p>
-                                                <span class="date">April 12, 2018 06:50</span>
-                                            </div>
-                                        </div>
-                                        <div class="notifi__item">
-                                            <div class="bg-c3 img-cir img-40">
-                                                <i class="zmdi zmdi-file-text"></i>
-                                            </div>
-                                            <div class="content">
-                                                <p>You got a new file</p>
-                                                <span class="date">April 12, 2018 06:50</span>
-                                            </div>
-                                        </div>
-                                        <div class="notifi__footer">
-                                            <a href="#">All notifications</a>
-                                        </div>
-                                    </div>
-                                </div>
-                             
-                            </div>
-                            <div class="account-wrap">
-                               
-                             
-                                        <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                            {{ Auth::user()->name }} <span class="caret"></span>
-                                        </a>
-        
-                                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                            <a class="dropdown-item" href="{{ route('logout') }}"
-                                               onclick="event.preventDefault();
-                                                             document.getElementById('logout-form').submit();">
-                                                {{ __('Logout') }}
-                                            </a>
-        
-                                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                                @csrf
-                                            </form>
-                                        </div>
-                                    
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="ring">
+                <div class="frame"></div>
             </div>
-        </header>
-        <!-- HEADER DESKTOP-->
-
-        <!-- MAIN CONTENT-->
-        <!-- MAIN CONTENT-->
-        <div class="main-content">
-            <div class="section__content section__content--p30">
-                <div class="container-fluid">
-
-
-
-
-                    @yield('content')
-
-
-
-                    <div class="col-md-12">
-                        <div class="copyright">
-                            <p>Copyright © 2018 Colorlib. All rights reserved. Template by <a href="https://colorlib.com">Colorlib</a>.</p>
-                        </div>
-                    </div>
-                </div>
+            <div class="ring">
+                <div class="frame"></div>
+            </div>
+            <div class="ring">
+                <div class="frame"></div>
+            </div>
+            <div class="ring">
+                <div class="frame"></div>
+            </div>
+            <div class="ring">
+                <div class="frame"></div>
+            </div>
+            <div class="ring">
+                <div class="frame"></div>
+            </div>
+            <div class="ring">
+                <div class="frame"></div>
+            </div>
+            <div class="ring">
+                <div class="frame"></div>
             </div>
         </div>
     </div>
-    <!-- END MAIN CONTENT-->
-    <!-- END MAIN CONTENT-->
-    <!-- END PAGE CONTAINER-->
 </div>
+<!-- Pre-loader end -->
+<div id="pcoded" class="pcoded">
+    <div class="pcoded-overlay-box"></div>
+    <div class="pcoded-container navbar-wrapper">
 
+        <nav class="navbar header-navbar pcoded-header">
+            <div class="navbar-wrapper">
+
+                <div class="navbar-logo">
+                    <a class="mobile-menu" id="mobile-collapse" href="#!">
+                        <i class="feather icon-menu"></i>
+                    </a>
+                    <a href="index-1.htm">
+                        <img class="img-fluid" src="{{ asset('dashboard_theme\assets\files\assets\images\logo.png')}}" alt="Theme-Logo">
+                    </a>
+                    <a class="mobile-options">
+                        <i class="feather icon-more-horizontal"></i>
+                    </a>
+                </div>
+
+                <div class="navbar-container container-fluid">
+                    <ul class="nav-left">
+                        <li class="header-search">
+                            <div class="main-search morphsearch-search">
+                                <div class="input-group">
+                                    <span class="input-group-addon search-close"><i class="feather icon-x"></i></span>
+                                    <input type="text" class="form-control">
+                                    <span class="input-group-addon search-btn"><i class="feather icon-search"></i></span>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#!" onclick="javascript:toggleFullScreen()">
+                                <i class="feather icon-maximize full-screen"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="nav-right">
+                
+                        <li class="header-notification">
+                            <div class="dropdown-primary dropdown">
+                                <div class="dropdown-toggle" data-toggle="dropdown">
+                                    <i>{{auth::user()->name}}</i>
+                                   
+                                </div>
+                                <ul class="show-notification notification-view dropdown-menu" data-dropdown-in="fadeIn" data-dropdown-out="fadeOut">
+                                    <li>
+                                        <h6>Notifications</h6>
+                                        <label class="label label-danger">New</label>
+                                    </li>
+                                    <li>
+                                        <div class="media">
+                                            <a class="dropdown-item" href="{{ route('logout') }}"
+                                            onclick="event.preventDefault();
+                                                          document.getElementById('logout-form').submit();">
+                                             {{ __('Logout') }}
+                                         </a>
+     
+                                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                             @csrf
+                                         </form>
+                                        </div>
+                                    </li>
+                                   
+                                </ul>
+                            </div>
+                        </li>
+                       
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Sidebar chat start -->
+        <div id="sidebar" class="users p-chat-user showChat">
+            <div class="had-container">
+                <div class="card card_main p-fixed users-main">
+                    <div class="user-box">
+                        <div class="chat-inner-header">
+                            <div class="back_chatBox">
+                                <div class="right-icon-control">
+                                    <input type="text" class="form-control  search-text" placeholder="Search Friend" id="search-friends">
+                                    <div class="form-icon">
+                                        <i class="icofont icofont-search"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="main-friend-list">
+                            <div class="media userlist-box" data-id="1" data-status="online" data-username="Josephin Doe" data-toggle="tooltip" data-placement="left" title="Josephin Doe">
+                                <a class="media-left" href="#!">
+                                    <img class="media-object img-radius img-radius" src="{{ asset('dashboard_theme\assets\files\assets\images\avatar-3.jpg')}}" alt="Generic placeholder image ">
+                                    <div class="live-status bg-success"></div>
+                                </a>
+                                <div class="media-body">
+                                    <div class="f-13 chat-header">Josephin Doe</div>
+                                </div>
+                            </div>
+                            <div class="media userlist-box" data-id="2" data-status="online" data-username="Lary Doe" data-toggle="tooltip" data-placement="left" title="Lary Doe">
+                                <a class="media-left" href="#!">
+                                    <img class="media-object img-radius" src="{{ asset('dashboard_theme\assets\files\assets\images\avatar-2.jpg')}}" alt="Generic placeholder image">
+                                    <div class="live-status bg-success"></div>
+                                </a>
+                                <div class="media-body">
+                                    <div class="f-13 chat-header">Lary Doe</div>
+                                </div>
+                            </div>
+                            <div class="media userlist-box" data-id="3" data-status="online" data-username="Alice" data-toggle="tooltip" data-placement="left" title="Alice">
+                                <a class="media-left" href="#!">
+                                    <img class="media-object img-radius" src="{{ asset('dashboard_theme\assets\files\assets\images\avatar-4.jpg')}}" alt="Generic placeholder image">
+                                    <div class="live-status bg-success"></div>
+                                </a>
+                                <div class="media-body">
+                                    <div class="f-13 chat-header">Alice</div>
+                                </div>
+                            </div>
+                            <div class="media userlist-box" data-id="4" data-status="online" data-username="Alia" data-toggle="tooltip" data-placement="left" title="Alia">
+                                <a class="media-left" href="#!">
+                                    <img class="media-object img-radius" src="{{ asset('dashboard_theme\assets\files\assets\images\avatar-3.jpg')}}" alt="Generic placeholder image">
+                                    <div class="live-status bg-success"></div>
+                                </a>
+                                <div class="media-body">
+                                    <div class="f-13 chat-header">Alia</div>
+                                </div>
+                            </div>
+                            <div class="media userlist-box" data-id="5" data-status="online" data-username="Suzen" data-toggle="tooltip" data-placement="left" title="Suzen">
+                                <a class="media-left" href="#!">
+                                    <img class="media-object img-radius" src="{{ asset('dashboard_theme\assets\files\assets\images\avatar-2.jpg')}}" alt="Generic placeholder image">
+                                    <div class="live-status bg-success"></div>
+                                </a>
+                                <div class="media-body">
+                                    <div class="f-13 chat-header">Suzen</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Sidebar inner chat start-->
+        <div class="showChat_inner">
+            <div class="media chat-inner-header">
+                <a class="back_chatBox">
+                    <i class="feather icon-chevron-left"></i> Josephin Doe
+                </a>
+            </div>
+            <div class="media chat-messages">
+                <a class="media-left photo-table" href="#!">
+                    <img class="media-object img-radius img-radius m-t-5" src="{{ asset('dashboard_theme\assets\files\assets\images\avatar-3.jpg')}}" alt="Generic placeholder image">
+                </a>
+                <div class="media-body chat-menu-content">
+                    <div class="">
+                        <p class="chat-cont">I'm just looking around. Will you tell me something about yourself?</p>
+                        <p class="chat-time">8:20 a.m.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="media chat-messages">
+                <div class="media-body chat-menu-reply">
+                    <div class="">
+                        <p class="chat-cont">I'm just looking around. Will you tell me something about yourself?</p>
+                        <p class="chat-time">8:20 a.m.</p>
+                    </div>
+                </div>
+                <div class="media-right photo-table">
+                    <a href="#!">
+                        <img class="media-object img-radius img-radius m-t-5" src="{{ asset('dashboard_theme\assets\files\assets\images\avatar-4.jpg')}}" alt="Generic placeholder image">
+                    </a>
+                </div>
+            </div>
+            <div class="chat-reply-box p-b-20">
+                <div class="right-icon-control">
+                    <input type="text" class="form-control search-text" placeholder="Share Your Thoughts">
+                    <div class="form-icon">
+                        <i class="feather icon-navigation"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Sidebar inner chat end-->
+        <div class="pcoded-main-container">
+            <div class="pcoded-wrapper">
+                <nav class="pcoded-navbar">
+                    <d class="pcoded-inner-navbar main-menu">
+                        <div class="pcoded-navigatio-lavel">Navigation Anas melhem </div>
+                        <ul class="pcoded-item pcoded-left-item">
+                         
+                            <li>
+                                <a href="/dashboard/admin/register">
+                                <span class="pcoded-micon"><i class="feather icon-home"></i></span>
+                               <span>   <i class="fas fa-tachometer-alt"></i> </span>Manage Admin</a>
+                            </li>
+                            <li>
+                                <a href="/dashboard/visitors">
+                                <span class="pcoded-micon"><i class="feather icon-home"></i></span>
+                               <span>   <i class="fas fa-tachometer-alt"></i> </span>Manage Visitors</a>
+                            </li>
+                            <li>
+                                <a href="/dashboard/partners">
+                                <span class="pcoded-micon"><i class="feather icon-home"></i></span>
+                               <span>   <i class="fas fa-tachometer-alt"></i> </span>Manage partners</a>
+                            </li>
+                            <li>
+                                <a href="/dashboard/bookings">
+                                <span class="pcoded-micon"><i class="feather icon-home"></i></span>
+                               <span>   <i class="fas fa-tachometer-alt"></i> </span>Manage bookings</a>
+                            </li>
+                            <li>
+                                <a href="/dashboard/jurnys">
+                                <span class="pcoded-micon"><i class="feather icon-home"></i></span>
+                               <span>   <i class="fas fa-tachometer-alt"></i> </span>Manage jurnys</a>
+                            </li>
+                            <li>
+                                <a href="/dashboard/contacts">
+                                <span class="pcoded-micon"><i class="feather icon-home"></i></span>
+                               <span>   <i class="fas fa-tachometer-alt"></i> </span>Manage contacts</a>
+                            </li>
+                        </ul>
+                        <ul class="pcoded-item pcoded-left-item">
+                            <li class="pcoded-hasmenu ">
+                                <a href="javascript:void(0)">
+                                    <span class="pcoded-micon"><i class="feather icon-file-minus"></i></span>
+                                    <span class="pcoded-mtext">Invoice</span>
+                                </a>
+                                <ul class="pcoded-submenu">
+                                    <li>
+                                        <a href="/dashboard/admin/register">
+                                        <span class="pcoded-micon"><i class="feather icon-home"></i></span>
+                                       <span>   <i class="fas fa-tachometer-alt"></i> </span>Manage Admin</a>
+                                    </li>
+                                    <li>
+                                        <a href="/dashboard/visitors">
+                                        <span class="pcoded-micon"><i class="feather icon-home"></i></span>
+                                       <span>   <i class="fas fa-tachometer-alt"></i> </span>Manage Visitors</a>
+                                    </li>
+                                    <li>
+                                        <a href="/dashboard/partners">
+                                        <span class="pcoded-micon"><i class="feather icon-home"></i></span>
+                                       <span>   <i class="fas fa-tachometer-alt"></i> </span>Manage partners</a>
+                                    </li>
+                                    <li>
+                                        <a href="/dashboard/bookings">
+                                        <span class="pcoded-micon"><i class="feather icon-home"></i></span>
+                                       <span>   <i class="fas fa-tachometer-alt"></i> </span>Manage bookings</a>
+                                    </li>
+                                    <li>
+                                        <a href="/dashboard/jurnys">
+                                        <span class="pcoded-micon"><i class="feather icon-home"></i></span>
+                                       <span>   <i class="fas fa-tachometer-alt"></i> </span>Manage jurnys</a>
+                                    </li>
+                                    <li>
+                                        <a href="/dashboard/contacts">
+                                        <span class="pcoded-micon"><i class="feather icon-home"></i></span>
+                                       <span>   <i class="fas fa-tachometer-alt"></i> </span>Manage contacts</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                  </nav>
+            </div>
+            
+    
+
+
+             
+                                <!-- Page-header end -->
+                                <!-- Page-body start -->
+                              
+                                @yield('content')
+                                
+                                <!-- Page-body end -->
+                      
+         
+
+
+<!-- Warning Section Starts -->
+<!-- Older IE warning message -->
+<!--[if lt IE 10]>
+<div class="ie-warning">
+    <h1>Warning!!</h1>
+    <p>You are using an outdated version of Internet Explorer, please upgrade <br/>to any of the following web browsers to access this website.</p>
+    <div class="iew-container">
+        <ul class="iew-download">
+            <li>
+                <a href="http://www.google.com/chrome/">
+                    <img src="../files/assets/images/browser/chrome.png" alt="Chrome">
+                    <div>Chrome</div>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.mozilla.org/en-US/firefox/new/">
+                    <img src="../files/assets/images/browser/firefox.png" alt="Firefox">
+                    <div>Firefox</div>
+                </a>
+            </li>
+            <li>
+                <a href="http://www.opera.com">
+                    <img src="../files/assets/images/browser/opera.png" alt="Opera">
+                    <div>Opera</div>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.apple.com/safari/">
+                    <img src="../files/assets/images/browser/safari.png" alt="Safari">
+                    <div>Safari</div>
+                </a>
+            </li>
+            <li>
+                <a href="http://windows.microsoft.com/en-us/internet-explorer/download-ie">
+                    <img src="../files/assets/images/browser/ie.png" alt="">
+                    <div>IE (9 & above)</div>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <p>Sorry for the inconvenience!</p>
 </div>
-
-<!-- Jquery JS-->
-<script src="{{ asset('dashboard_theme/vendor/jquery-3.2.1.min.js')}}"></script>
-<!-- Bootstrap JS-->
-<script src="{{ asset('dashboard_theme/vendor/bootstrap-4.1/popper.min.js')}}"></script>
-<script src="{{ asset('dashboard_theme/vendor/bootstrap-4.1/bootstrap.min.js')}}"></script>
-<!-- Vendor JS       -->
-<script src="{{ asset('dashboard_theme/vendor/slick/slick.min.js')}}">
-</script>
-<script src="{{ asset('dashboard_theme/vendor/wow/wow.min.js')}}"></script>
-<script src="{{ asset('dashboard_theme/vendor/animsition/animsition.min.js')}}"></script>
-<script src="{{ asset('dashboard_theme/vendor/bootstrap-progressbar/bootstrap-progressbar.min.js')}}">
-</script>
-<script src="{{ asset('dashboard_theme/vendor/counter-up/jquery.waypoints.min.js')}}"></script>
-<script src="{{ asset('dashboard_theme/vendor/counter-up/jquery.counterup.min.js')}}">
-</script>
-<script src="{{ asset('dashboard_theme/vendor/circle-progress/circle-progress.min.js')}}"></script>
-<script src="{{ asset('dashboard_theme/vendor/perfect-scrollbar/perfect-scrollbar.js')}}"></script>
-<script src="{{ asset('dashboard_theme/vendor/chartjs/Chart.bundle.min.js')}}"></script>
-<script src="{{ asset('dashboard_theme/vendor/select2/select2.min.js')}}">
-</script>
-
-<!-- Main JS-->
-<script src="{{ asset('dashboard_theme/js/main.js')}}"></script>
+<![endif]-->
+<!-- Warning Section Ends -->
+<!-- Warning Section Starts -->
+<!-- Older IE warning message -->
+<!--[if lt IE 10]>
+<div class="ie-warning">
+    <h1>Warning!!</h1>
+    <p>You are using an outdated version of Internet Explorer, please upgrade <br/>to any of the following web browsers to access this website.</p>
+    <div class="iew-container">
+        <ul class="iew-download">
+            <li>
+                <a href="http://www.google.com/chrome/">
+                    <img src="../files/assets/images/browser/chrome.png" alt="Chrome">
+                    <div>Chrome</div>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.mozilla.org/en-US/firefox/new/">
+                    <img src="../files/assets/images/browser/firefox.png" alt="Firefox">
+                    <div>Firefox</div>
+                </a>
+            </li>
+            <li>
+                <a href="http://www.opera.com">
+                    <img src="../files/assets/images/browser/opera.png" alt="Opera">
+                    <div>Opera</div>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.apple.com/safari/">
+                    <img src="../files/assets/images/browser/safari.png" alt="Safari">
+                    <div>Safari</div>
+                </a>
+            </li>
+            <li>
+                <a href="http://windows.microsoft.com/en-us/internet-explorer/download-ie">
+                    <img src="../files/assets/images/browser/ie.png" alt="">
+                    <div>IE (9 & above)</div>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <p>Sorry for the inconvenience!</p>
+</div>
+<![endif]-->
+<!-- Warning Section Ends -->
+<!-- Required Jquery -->
 @include('sweetalert::alert')
+<script type="text/javascript" src="{{ asset('dashboard_theme\assets\files\bower_components\jquery\js\jquery.min.js')}}"></script>
+<script type="text/javascript" src="{{ asset('dashboard_theme\assets\files\bower_components\jquery-ui\js\jquery-ui.min.js')}}"></script>
+<script type="text/javascript" src="{{ asset('dashboard_theme\assets\files\bower_components\popper.js\js\popper.min.js')}}"></script>
+<script type="text/javascript" src="{{ asset('dashboard_theme\assets\files\bower_components\bootstrap\js\bootstrap.min.js')}}"></script>
+<!-- jquery slimscroll js -->
+<script type="text/javascript" src="{{ asset('dashboard_theme\assets\files\bower_components\jquery-slimscroll\js\jquery.slimscroll.js')}}"></script>
+<!-- modernizr js -->
+<script type="text/javascript" src="{{ asset('dashboard_theme\assets\files\bower_components\modernizr\js\modernizr.js')}}"></script>
+<script type="text/javascript" src="{{ asset('dashboard_theme\assets\files\bower_components\modernizr\js\css-scrollbars.js')}}"></script>
 
+
+<!-- ace editor js -->
+<script type="text/javascript" src="{{ asset('dashboard_theme\assets\files\assets\pages\ace-editor\build\aui\aui.js')}}"></script>
+<!-- i18next.min.js -->
+<script type="text/javascript" src="{{ asset('dashboard_theme\assets\files\bower_components\i18next\js\i18next.min.js')}}"></script>
+<script type="text/javascript" src="{{ asset('dashboard_theme\assets\files\bower_components\i18next-xhr-backend\js\i18nextXHRBackend.min.js')}}"></script>
+<script type="text/javascript" src="{{ asset('dashboard_theme\assets\files\bower_components\i18next-browser-languagedetector\js\i18nextBrowserLanguageDetector.min.js')}}"></script>
+<script type="text/javascript" src="{{ asset('dashboard_theme\assets\files\bower_components\jquery-i18next\js\jquery-i18next.min.js')}}"></script>
+<!-- Custom js -->
+<script type="text/javascript" src="{{ asset('dashboard_theme\assets\files\assets\pages\ace-editor\ace-editor-custom.js')}}"></script>
+<script src="{{ asset('dashboard_theme\assets\files\assets\js\pcoded.min.js')}}"></script>
+<script src="{{ asset('dashboard_theme\assets\files\assets\js\vartical-layout.min.js')}}"></script>
+<script src="{{ asset('dashboard_theme\assets\files\assets\js\jquery.mCustomScrollbar.concat.min.js')}}"></script>
+<script type="text/javascript" src="{{ asset('dashboard_theme\assets\files\assets\js\script.js')}}"></script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-23581568-13');
+</script>
 </body>
 
 </html>
-<!-- end document-->

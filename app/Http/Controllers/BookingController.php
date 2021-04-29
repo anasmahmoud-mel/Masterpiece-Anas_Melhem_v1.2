@@ -12,7 +12,7 @@ use App\User;
 use App\Jurny;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Request as FacadesRequest;
-
+use RealRashid\SweetAlert\Facades\Alert;
 class BookingController extends Controller
 {
     /**
@@ -218,13 +218,14 @@ class BookingController extends Controller
         // $book=$bookings->booking;
         // dd($book);
         // dd($bookings);
-        $bookings = Jurny::where('user_id',$id)->get();
+        $bookings =Booking::where('user_id',$id)->get()->all();
         // $jurny = Booking::find('jurny_id');
         // $jurny=Booking::all();
         // $hh=$jurny->book;
-        // dd($hh);
+        //dd($hh);
+         // dd($bookings);
 
-        return view('public_view.my-account',compact('bookings'));
+      return view('public_view.my-account',compact('bookings'));
 
 
 
@@ -261,5 +262,5 @@ class BookingController extends Controller
         //      dd('anas');
 
             //   return view('public_view.my-account', compact('prop', 'state'));
+            //  $comment = Accept::get()->all();
          }
-        //  $comment = Accept::get()->all();

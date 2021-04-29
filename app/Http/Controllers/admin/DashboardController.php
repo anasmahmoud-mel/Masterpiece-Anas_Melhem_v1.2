@@ -15,6 +15,23 @@ class DashboardController extends Controller
         return view('dashboard_view.register')->with('users', $users);
     }
 
+
+      public function create(){
+        return view('dashboard_view.add');
+      }
+
+      public function store(Request $request)
+      {
+          User::create($request->all());
+          toast('user Adedd','success','top-right')->showCloseButton();
+          // return redirect('/order');
+  
+          return redirect('/dashboard/admin/register');
+      }
+  
+
+
+
     public function registeredit(Request $request, $id)
     {
         $users = User::findOrFail($id);
