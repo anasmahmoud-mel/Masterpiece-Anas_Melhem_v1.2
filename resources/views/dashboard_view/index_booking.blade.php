@@ -69,12 +69,13 @@
                              <td>{{ $booking->booking_mobile }}</td>
                              <td>{{ $booking->booking_passenger }}</td>
                              {{-- {{ route('visitors.edit', $visitor->id) }} --}}
-                             <td><a href="{{ route('bookings.edit', $booking->id) }}" class="btn btn-success">Edit</a>
-                             </td>
-                        {{-- <td>
-                     <form action="{{ action('VisitorController@destroy') }}" method="post"> --}}
                              <td>
-                                 <form action="{{ route('bookings.destroy', $booking->id) }}" method="post">
+                                 <a href="{{ route('bookings.edit', $booking->id) }}" class="btn btn-success">Edit</a>
+                                 
+                             </td>
+                
+                             <td>
+                                 <form action="{{ route('bookings.destroy', $booking->id) }}" method="post" id="yourFormId">
                                      @csrf
                                      @method('DELETE')
                                      <button class="btn btn-danger" type="submit">Delete</button>
@@ -106,3 +107,110 @@
 
         
 @endsection
+<script>
+    //== Class definition
+    var SweetAlert2Demo = function() {
+
+        //== Demos
+        var initDemos = function() {
+            $('.btn-danger').click(function(e) {
+                var $form =  $(this).closest("form"); //Get the form here.
+                e.preventDefault();
+                   swal({
+                        title: 'Are you sure?',
+                        text: "You won't be able to revert this!",
+                        type: 'warning',
+                        buttons:{
+                            confirm: {
+                                text : 'Yes, delete it!',
+                                className : 'btn btn-success'
+                            },
+                            cancel: {
+                                visible: true,
+                                className: 'btn btn-danger'
+                            }
+                        }
+                    }).then((Delete) => {
+                        console.log(Delete); //This will be true when delete is clicked
+                        if (Delete) {
+                           $form.submit(); //Submit your Form Here. 
+                           $('#yourFormId').submit(); //Use same Form Id to submit the Form.
+                        }
+                    });
+        });
+        };
+
+        return {
+            //== Init
+            init: function() {
+                initDemos();
+            },
+        };
+    }();
+
+    //== Class Initialization
+    jQuery(document).ready(function() {
+        SweetAlert2Demo.init();
+    });
+</script>
+
+
+<tbody>
+{{-- 
+    @foreach ($booking as $booking)
+        <tr>
+
+            <td>{{ $booking->booking_name }}</td>
+            <td>{{ $booking->booking_email }}</td>
+            <td>{{ $booking->booking_mobile }}</td>
+            <td>{{ $booking->booking_passenger }}</td>
+            <td>
+                <a href="{{ route('bookings.edit', $booking->id) }}"
+                    class="btn btn-success">Edit</a>
+               
+                <button class="btn btn-danger" onclick="
+     event.preventDefault();
+     swal({
+     title: 'Are you sure?',
+     text: 'You wont be able to revert this!',
+     icon: 'warning',
+     showCancelButton: true,
+     confirmButtonColor: '#3f51b5',
+     cancelButtonColor: '#ff4081',
+     confirmButtonText: 'Great ',
+     buttons: {
+     cancel: {
+     text: 'Cancel',
+     value: null,
+     visible: true,
+     className: 'btn btn-danger',
+     closeModal: true,
+     },
+     confirm: {
+     text: 'OK',
+     value: true,
+     visible: true,
+     className: 'btn btn-primary',
+     closeModal: true
+       }
+     }
+             }).then(function(ok){
+       if(ok===true)
+       document.getElementById('delete-form-{{ $booking->id }}').submit();
+    })">delete
+
+
+
+                    <form id="delete-form-{{ $booking->id }}"
+                        action="{{ route('bookings.destroy', $booking->id) }}"
+                        method="post" class="d-none">
+                        @csrf
+                        @method('DELETE')
+                        <input type="hidden" name="id" value="{{ $booking->id }}">
+                    </form>
+                </button>
+             </td>
+        </tr>
+    @endforeach
+
+</tbody> --}}

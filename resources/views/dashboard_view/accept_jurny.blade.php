@@ -66,11 +66,11 @@
                                  
                          
                       
-                              <div class="form-group">
+                              <div class="form-group" readonly="">
                                 <label for="price">From:</label>
                               
                                 
-                                <select class="form-control input-lg" name="from" id="from">
+                                <select class="form-control input-lg" name="from" id="from" readonly="">
                                   <option value="Amman">Amman</option>
                                   <option value="Irbid">Irbid</option>
                                   <option value="Mafraq">Mafraq</option>
@@ -85,9 +85,9 @@
                                   <option value="Al-Karak">Al-Karak</option>
                                 </select>
                               </div>
-                              <div class="form-group">
+                              <div class="form-group" readonly="">
                                 <label for="price">To:</label>
-                                <select class="form-control input-lg" name="to" id="to">
+                                <select class="form-control input-lg" name="to" id="to"readonly="">
                                   <option value="Amman">Amman</option>
                                   <option value="Irbid">Irbid</option>
                                   <option value="Mafraq">Mafraq</option>
@@ -104,26 +104,26 @@
                               </div>
                               <div class="form-group">
                                 <label for="price">Date:</label>
-                                <input type="text" id="post_body" class="form-control" name="date" value={{ $jurny->date }}>
+                                <input type="text" id="post_body" class="form-control" name="date" value={{ $jurny->date }} readonly="">
                               </div>
                               <div class="form-group">
                                 <label for="price">Break:</label>
-                                <input type="text" id="post_body" class="form-control" name="break" value={{ $jurny->break }}>
+                                <input type="text" id="post_body" class="form-control" name="break" value={{ $jurny->break }} readonly="">
                               </div>
                               <div class="form-group">
                                 <label for="price">Arrival_time:</label>
-                                <input type="text" id="post_body" class="form-control" name="arrival_time" value={{ $jurny->arrival_time }}>
+                                <input type="text" id="post_body" class="form-control" name="arrival_time" value={{ $jurny->arrival_time }} readonly="">
                               </div>
                               <div class="form-group">
                                 <label for="price">Driver_name:</label>
-                                <input type="text" id="post_body" class="form-control" name="driver_name" value={{ $jurny->driver_name }}>
+                                <input type="text" id="post_body" class="form-control" name="driver_name" value={{ $jurny->driver_name }} readonly="">
                               </div>
                               <div class="form-group">
                                 <label for="price">Price:</label>
-                                <input type="double" id="post_body" class="form-control" name="price" value={{ $jurny->price }}>
+                                <input type="double" id="post_body" class="form-control" name="price" value={{ $jurny->price }} readonly="">
                               </div>
                               
-                              <button type="submit" class="btn btn-primary">Save</button>
+                              <button type="submit" class="form-control form-bg-primary">Accept</button>
                             </form>
                                   </div>
                               </div>

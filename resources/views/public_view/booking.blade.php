@@ -14,9 +14,9 @@
                                 <ol>
                                     <li class="bkg-1 done"><a href="main">Find direction</a></li>
                                     <li class="bkg-2"><a href="#s-2" class="selected">Select your jurny</a></li>
-                                    <li class="bkg-3"><a href="#s-3">Personal info & payment</a></li>
-                                    <li class="bkg-4"><a href="#s-3">Final</a></li>
-                                </ol>
+                                    <li class="bkg-3"><a href="#s-3">Personal info </a></li>
+                                    {{--<li class="bkg-4"><a href="#s-3">Final</a></li>--}}
+                                </ol> 
                             </div>
 
                             <div class="stpe-content">
@@ -60,9 +60,9 @@
                                                 <div class="li-car-price col-xs-12 col-sm-2 col-md-2">
                                                     <div class="car-price-content">
                                                         <b class="overflow car-price">{{ $jurnys->price }}</b><b
-                                                            class="price-currency">JD</b><br>
-                                                        <del class="overflow del-car-price">10</del><del
-                                                            class="del-price-currency">JD</del>
+                                                            {{-- class="price-currency">JD</b><br> --}}
+                                                        {{-- <del class="overflow del-car-price">10</del>--}}<del
+                                                            class="del-price-currency">JD</del> 
                                                     </div>
                                                     <a class="btn btn-default btn-nxt-booking">Next</a>
                                                 </div>
@@ -112,14 +112,14 @@
                                         {{ csrf_field() }}
                                         <div class="col-sm-6">
                                             <div class="form-group">
-                                                <label for="name-login">Name</label>
-                                                <input class="form-control" id="name-login" type="text" name="booking_name" value="{{ Auth::user()->name }}">
+                                                {{-- <label for="name-login">Name</label> --}}
+                                                <input class="form-control" id="name-login" type="hidden" name="booking_name" value="{{ Auth::user()->name }}">
                                             </div>
                                         </div>
                                         <div class="col-sm-6">
                                             <div class="form-group">
-                                                <label for="email-login">Email</label>
-                                                <input class="form-control" id="email-login" type="text"
+                                                {{-- <label for="email-login">Email</label> --}}
+                                                <input class="form-control" id="email-login" type="hidden"
                                                     name="booking_email" value="{{ Auth::user()->email }}">
                                             </div>
                                         </div>
@@ -157,13 +157,13 @@
                                     </form>
 
                                 </div>
-                                <div class="pay-data hide wow fadeInLeft padding-10">
+                                {{-- <div class="pay-data hide wow fadeInLeft padding-10">
                                     <br>
                                     <h2>Payment section her :</h2>
                                     <br>
                                     <button type="button" id="pay-booking-back" class="btn btn-default">Back</button>
 
-                                </div>
+                                </div> --}}
                             </div>
                         </div>
                     </section>

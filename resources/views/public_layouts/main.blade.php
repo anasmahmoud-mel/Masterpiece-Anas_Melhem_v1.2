@@ -117,14 +117,14 @@
 
 
                                         <div id="date_time" class="form-group">
-                                            <input class="form-control input-lg" name="pick_up_date" type="date" placeholder="Pick up date" required>
+                                            <input class="form-control input-lg" name="pick_up_date" id="pick_up_date"  type="date" placeholder="Pick up date" required>
                                             
                                         </div><br>
 
-                                        <div id="date_time" class="form-group">
-                                            <input class="form-control input-lg" name="pick_up_date" type="time" placeholder="Pick up time" required>
+                                        {{-- <div id="date_time" class="form-group">
+                                            <input class="form-control input-lg" name="pick_up" type="time" placeholder="Pick up time" required>
                                             
-                                        </div><br>
+                                        </div><br> --}}
 
 
                                       
@@ -361,7 +361,8 @@
             <div class="container">
                 <div class="text-center">
                     <!-- /.pricing title -->
-                    <h2 class="wow fadeInLeft">The Fixed Price</h2>
+                    <h2 class="wow fadeInLeft">The Fixed
+                         Price</h2>
                     <div class="title-line wow fadeInRight"></div>
                 </div>
                 <div class="row package-option">

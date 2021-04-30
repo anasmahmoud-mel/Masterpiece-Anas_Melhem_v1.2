@@ -60,7 +60,12 @@ class RelationController extends Controller
     //$visitor = Visitor::get()->first();
     $search_text = $request->get('take_from');
     $search_text2 = $request->get('take_to');
-    $jurny = DB::table('jurnys')->where('from', 'like', '%' . $search_text . '%')->where('to', 'like', '%' . $search_text2 . '%')->paginate(5);
+    $search_text3 = $request->get('pick_up_date');
+    $jurny = DB::table('jurnys')->where('from', 'like', '%' . $search_text . '%')
+                                ->where('to', 'like', '%' . $search_text2 . '%')
+                                ->where('date', 'like', '%' . $search_text3 . '%')
+                                
+                                ->paginate(5);
       
     // am trying to redirect to another page when result not found(false) but i cant .... 
 
